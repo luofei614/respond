@@ -22,7 +22,8 @@
 	    theTarget.tagName.toUpperCase().indexOf("TEXTAREA") == -1 && 
 	    theTarget.tagName.toUpperCase().indexOf("INPUT") == -1)  //SELECT, TEXTAREA & INPUT
 	    {
-	        preventAll(originalEvent);
+            // by luofei , 为了兼容iscroll 去掉原生事件的取消监听
+	       // preventAll(originalEvent);
 	    }
     
 	    var touchevt = document.createEvent("Event");
